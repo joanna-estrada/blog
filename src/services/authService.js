@@ -10,6 +10,7 @@ export function SignOut() {
   return (
     <div>
       Hello, {auth.currentUser.displayName} &nbsp;
+      <img alt="avatar" src={auth.currentUser.photoURL} /> &nbsp;
       <button onClick={() => signOut(auth)}>Sign Out</button>
     </div>
   )
@@ -24,3 +25,4 @@ export function useAuthentication() {
   }, [])
   return user
 }
+
